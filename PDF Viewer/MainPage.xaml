@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDF_Viewer.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+                Text="Enter URL to Convert PDF"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                HorizontalOptions="Center" 
+            />
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Border Stroke="White"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 5,5,5,5"
+                        HorizontalOptions="Center">
+                    <Entry
+                        x:Name="URL"
+                        HeightRequest="50"
+                        WidthRequest="300" 
+                        HorizontalOptions="Center"
+                    />
+                </Border>
+
+                <Button
+                    x:Name="urlPDF"
+                    Text="Convert URL to PDF"
+                    Margin="30,0,0,0"
+                    Clicked="UrlToPdf"
+                    HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+
+
+            <Line Stroke="White" X2="1500" />
+
+            <Label
+                Text="Enter HTML to Convert to PDF"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            <Border 
+                Stroke="White"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 5,5,5,5"
+                HorizontalOptions="Center">
+                
+                <Editor
+                    x:Name="HTML"
+                    HeightRequest="200"
+                    WidthRequest="300" 
+                    HorizontalOptions="Center"
+                />
+
+            </Border>
+
+            <Button
+                x:Name="htmlPDF"
+                Text="Convert HTML to PDF"
+                Clicked="HtmlToPdf"
+                HorizontalOptions="Center" />
+
+            <Line Stroke="White" X2="1500" />
+
+            <Label
+                Text="Convert HTML file to PDF"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="htmlFilePDF"
+                Text="Convert HTML file to PDF"
+                Clicked="FileToPdf"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
